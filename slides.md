@@ -1,36 +1,36 @@
 ---
-# try also 'default' to start simple
 theme: default
-
 layout: intro
-
-# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
   persist: false
-# use UnoCSS
 css: unocss
+title: Qwik fix to the cost of javascript
 ---
 
 # Qwik fix to the cost of javascript
 
-Understanding the new web framework
+Introduction to the new web framework
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
     Let's Begin <carbon:arrow-right class="inline"/>
   </span>
 </div>
+
+<!--
+This is not an ad
+
+There are some questions for you during our session, use teams chat
+
+Repo used here will be shared if you want to try it out
+-->
 
 ---
 
@@ -50,21 +50,28 @@ Understanding the new web framework
 
 [🌐 manohar27.github.io](https://manohar27.github.io)
 
+<!--
+Remember to start recording
+-->
+
 ---
-layout: section 
+layout: section
 ---
 
 # Evolution of web development
 
+<!--
+Quick recap of things were
+-->
 
 ---
 layout: image-right
-image: "/assets/mohammad-rahmani-oXlXu2qukGE-unsplash.jpg"
+image: /assets/mohammad-rahmani-oXlXu2qukGE-unsplash.jpg
 ---
 
-# Server Side Scripting
+# Remember this?
 
-```php {6}
+```php {|6}
 <html>
  <head>
   <title>PHP Test</title>
@@ -75,11 +82,26 @@ image: "/assets/mohammad-rahmani-oXlXu2qukGE-unsplash.jpg"
 </html>
 ```
 
+<v-click>
+
+<br />
+
+* Multi page applications
+* Any interaction was a page reload
+* Zero javascript
+
+</v-click>
+
+<!--
+Imagine like a tweet causing a page reload
+-->
+
 ---
 layout: default
 ---
 
-# A few other options
+# And these?
+
 <v-click>
 <img class="inline m-4" src="/assets/ruby-on-rails.webp" width="100" />
 </v-click>
@@ -101,47 +123,213 @@ layout: default
 
 <v-click>
 
-## Lots of options
+#### and everything else
 </v-click>
 
 <v-click>
 
 <img class="inline m-4" src="/assets/all-the-frameworks.jpg" />
 </v-click>
----
 
-# Land of javascript frameworks
-
-* Insert jquery, angular, react, vue, svelte
-* nextjs, nuxtjs, sveltekit
-
+<!--
+And as web got more and more interactive
+-->
 
 ---
-layout: iframe-right
-url: https://app.sli.do/event/arPrGLpGBrcupDfe2QqjFb/embed/polls/5d168cc6-917a-4549-a409-6ab250c1e9ac
+layout: two-cols
 ---
+
+# Land of javascript
+
+* jquery
+* polymer
+* ember
+* backbone
+* angular
+* reactjs - nextjs, gatsby
+* vuejs
+* svelte
+* etc
+
+::right::
+
+<v-click>
+<img src="/assets/meme-1.jpeg" >
+</v-click>
+
+<!--
+etc includes qwik as well
+-->
+
+---
+
 # Quiz
 
-What is the popular python based web framework? 
+<h3>What is the popular python based web framework <logos-python /> ? </h3>
 
+a) polymer
+
+b) vaadin
+
+c) django
+
+d) qwik
+
+<br/>
+
+### Answer
+<v-click>
+<h1 class="c-green">django</h1>
+</v-click>
+
+<!--
+Let's use the team chat to leave your answers
+-->
+
+---
+layout: two-cols
 ---
 
 # Cost of javascript
 
+
+* Complexity ⏫ = Javascript ⏫
+* Download time
+* Parsing
+* Hydration
+
+
+<v-click>
+
+## This leads to
+
+* Impact on revenue
+* Impact to SEO
+
+</v-click>
+
+<v-click>
+
+## You then try to solve it
+
+* Devs figuring out how to split bundles
+* Inlining critical css,js - lazy loading everything else
+</v-click>
+
+::right::
+
+<v-click>
+<h2>An example <logos-reddit /> </h2>
+
+<br />
+<img src="https://v8.dev/_img/cost-of-javascript-2019/reddit-js-processing.svg">
+
+<quote class="c-blue">Source: v8.dev (2019)</quote>
+</v-click>
+
+<!--
+Javascript is proportional to the complexity
+
+Revenue - customers will leave if your site is slow
+
+Page speed impacts SEO ranking
+-->
+
+---
+layout: two-cols
 ---
 
-# What is qwik?
+# Another example: tesco.com
+
+## Quiz 
+
+<br />
+
+### Any guesses on what tesco.com's webvitals performance score is? 
+
+Post your guesses in the teams chat
+
+
+
+
+::right::
+
+
+<v-click>
+
+## Answer
+</v-click>
+
+<v-click>
+
+* Mobile
+
+<img src="/assets/mobile.png" width="250"  >
+
+
+<br />
+
+* Desktop
+
+<img src="/assets/desktop.png" width="250" >
+</v-click>
+
+<!--
+Yeah there's room for improvement here
+
+JS is the enemy then
+-->
+
+---
+layout: section
+---
+
+# Qwik
+
+---
+layout: two-cols
+---
+<h1><span class="c-blue">qwik</span> is a</h1>
+
+<br/>
+
+* ## resumable
+* ## progressive 
+
+UI framework built by builder.io
+
+<br />
+<h3>
+<a href="https://qwik.builder.io/">https://qwik.builder.io/</a>
+</h3>
+
+::right::
+
+<img src="/assets/qwik-start.png"  />
+
+---
+layout: center
+---
+
+# So what's different ?
+
+* ## Delaying JS execution as much as possible
+* ## Resumability
 
 ---
 
-# Core principle
+# Delay JS execution
+
+<br />
+
+<img style="width: 100%" src="/assets/qwik-overview.png" />
+
+
 
 ---
 
-# Hydration is the enemy
-
-* Resumable 
-* Progressive
+# Resumability
+<img src="/assets/hydration-resumable.webp" />
 
 ---
 layout: section
@@ -151,13 +339,14 @@ layout: section
 
 ---
 layout: iframe-right
-url: "https://todo-app-qwik.vercel.app/"
+url: https://todo-app-qwik.vercel.app/
 ---
 
-# Timed Todo App
 
-* Let's implement, delete todo functionality
+
 
 ---
+layout: section
+---
 
-# Questions
+# Questions?
