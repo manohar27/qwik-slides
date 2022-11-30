@@ -214,6 +214,7 @@ layout: two-cols
 
 * Devs figuring out how to split bundles
 * Inlining critical css,js - lazy loading everything else
+
 </v-click>
 
 ::right::
@@ -342,8 +343,36 @@ layout: iframe-right
 url: https://todo-app-qwik.vercel.app/
 ---
 
+# Timed todo app
+
+<br />
+
+#### Let's implement delete todo functionality
 
 
+<br />
+<br />
+
+<logos-github-icon /> <a class="text-[0.8em]" href="https://github.com/manohar27/todo-app-qwik">https://github.com/manohar27/todo-app-qwik</a>
+
+<br />
+<br />
+
+
+<p class="text-[0.8em]">
+
+P.S: There's a very easy to find easter egg in the application, let's see who finds it first. Post a screenshot in the teams chat
+
+Scan the below QR code to open the app on your phone
+
+<img width="100" src="/assets/todo-app-vercel.png" />
+
+</p>
+
+<!--
+Show the timer feature
+Find the easter egg
+-->
 
 ---
 layout: section
