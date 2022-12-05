@@ -61,7 +61,7 @@ layout: section
 # Evolution of web development
 
 <!--
-Quick recap of things were
+Quick recap of how things were
 -->
 
 ---
@@ -278,7 +278,9 @@ Post your guesses in the teams chat
 <!--
 Yeah there's room for improvement here
 
-JS is the enemy then
+JS is the enemy
+
+The Time to Interactive is about 12s on a mobile device
 -->
 
 ---
@@ -317,6 +319,10 @@ layout: center
 * ## Delaying JS execution as much as possible
 * ## Resumability
 
+<!--
+Also called progressive
+-->
+
 ---
 
 # Delay JS execution
@@ -325,18 +331,32 @@ layout: center
 
 <img style="width: 100%" src="/assets/qwik-overview.png" />
 
-
+<!--
+qwik loader, bare minimum js for qwik to start
+-->
 
 ---
 
 # Resumability
 <img src="/assets/hydration-resumable.webp" />
 
+<!--
+two versions - html & js component tree
+
+component tree event mapping/binding
+-->
+
 ---
 layout: section
 ---
 
-# Hands on
+<h1> Hands on </h1>
+
+<v-click>
+<div style="display: flex; justify-content: center">
+<img width="400" src="/assets/demo-god-meme.jpeg" />
+</div>
+</v-click>
 
 ---
 layout: iframe-right
@@ -371,7 +391,37 @@ Scan the below QR code to open the app on your phone
 
 <!--
 Show the timer feature
+
 Find the easter egg
+
+Send the url on chat
+
+Show that No JS is downloaded on live
+
+Show that progressively JS is downloaded
+
+
+Watch out for time here
+
+Open dev version
+
+
+Show qwik loader
+
+Show QRL - qwik optimizer
+
+Show progressive nature
+
+Show code that is downloaded
+
+Show resumability with HTML copy paste in new tab
+
+Start from todo-list/index
+
+implement delete functionality
+
+
+If there is time, go through simple counter example
 -->
 
 ---
@@ -379,3 +429,11 @@ layout: section
 ---
 
 # Questions?
+
+
+---
+layout: intro
+---
+
+# Thank you
+
